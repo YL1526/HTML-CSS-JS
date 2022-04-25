@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 482px;
+            height: 480px;
+        }
+        
+        div {
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="images/天庭号 阿宙斯.jpg" alt="">
+    <div>上午好,天庭号向你问好了</div>
+    <script>
+        // 根据系统不同时间来判断 所以需要用到日期内置对象
+        // 利用多分支语句来设置不同的图片
+        // 需要一个图片，而且根据时间修改图片，就需要用到操作元素src属性
+        // 需要一个div元素 显示不同问候语 修改元素即可
+        var img = document.querySelector('img');
+        var div = document.querySelector('div');
+        // 得到小时数
+        var date = new Date();
+        var h = date.getHours();
+        //判断小时数
+        if (h >= 0 && h <= 5) {
+            // img.src = "images/鲜花女男爵.jpg"
+            div.innerHTML = "凌晨好，鲜花向你问好了"
+        } else if (h >= 6 && h <= 10) {
+            img.src = "images/destiny_hero___destroy_phoenixguy_by_mrcat95_den5s2q.png"
+            div.innerHTML = "上午好，毁灭凤凰人向你问好了"
+
+        } else if (h >= 11 && h <= 14) {
+            img.src = "images/red_eyes_dark_dragoon_by_mrcat95_defjqqx.png"
+            div.innerHTML = "中午好，黑魔导龙骑兵向你问好了"
+
+        } else if (h >= 15 && h <= 18) {
+            img.src = "images/天庭号 阿宙斯.jpg"
+            div.innerHTML = "下午好，天庭号向你问好了"
+
+        } else {
+            img.src = "images/青眼混沌极龙 大图版.jpg"
+            div.innerHTML = "晚上好，极龙向你问好了"
+        }
+    </script>
+</body>
+
+</html>

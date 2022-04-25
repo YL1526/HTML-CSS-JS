@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 改变元素的属性操作 -->
+    <button id="bl">青眼白龙</button>
+    <button id="ybl">青眼亚白龙</button><br>
+    <img src="images/bl.jpg" alt="" title="青眼白龙">
+    <script>
+        //修改元素属性 src
+        //1.获取元素
+        var bl = document.getElementById('bl');
+        var ybl = document.getElementById('ybl');
+        var img = document.querySelector('img');
+        bl.onclick = function() {
+            img.src = "images/bl.jpg";
+            img.title = "青眼白龙";
+        }
+        ybl.onclick = function() {
+            img.src = "images/ybl.jpg";
+            img.title = "青眼亚白龙";
+        }
+    </script>
+</body>
+
+</html>
